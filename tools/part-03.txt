@@ -1,0 +1,7 @@
+licación de Términos . . . . . . . . . . . . . . . . . . . . . . . 8
+  4.1.  Definición de estado de protocolo o Nivel de madurez (State). . . . 9
+  4.1.1.  Protocolo Estándar (Standard) . . . . . . . . . . . . . . . . . . 9
+  4.1.2.  Protocolo Borrador de Estándar (Draft Standard) . . . . . . . . . 9
+  4.1.3.  Protocolo Propuesto para Estándar (Proposed Standard) . . . . . . 9
+  4.1.4.  Protocolo Experimental. . . . . . . . . . . . . . . . . . . . . . 9
+  4.1.5.  Protocolo Informativo (In

@@ -1,0 +1,8 @@
+. . . . . . . . . . 3
+  2.  Los documentos Request for Comments - RFC . . . . . . . . . . . . . . 5
+  3.  Otros documentos de referencia. . . . . . . . . . . . . . . . . . . . 6
+  3.1.  Los Números Asignados (Assigned Numbers). . . . . . . . . . . . . . 6
+  3.2.  Los Requerimientos de Gateway (Gateway Requirements). . . . . . . . 7
+  3.3.  Los Requerimientos de Host (Host Requirements). . . . . . . . . . . 7
+  3.4.  Los Documentos MIL-STD. . . . . . . . . . . . . . . . . . . . . . . 7
+  4.  Exp

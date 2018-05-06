@@ -1,0 +1,30 @@
+Paso 1: Complacion de toda la app
+dent@estudios2018:~/Computación2/tp1-2018$ make
+gcc -c  pegar.c
+gcc  pegar.o gestionar_archivo.o -o pegar
+pegar, creado!
+
+Paso 2: Lectura de stdin estandar via ls pasandole el nombre de archivo con -o
+dent@estudios2018:~/Computación2/tp1-2018$ make test
+ls ../tools/part-0* | ./pegar -o archivo_salida.txt
+
+Paso 3: Leo stdin y pego lo de ls en archivo creado con -o 
+dent@estudios2018:~/Computación2/tp1-2018$ ls ../tools/part-0* | ./pegar -o salida.txt
+
+Paso 4: uso de menú, -h muestras menu. otra -x muestra error
+////////        '-h': , Si existe esa opción
+dent@estudios2018:~/Computación2/tp1-2018$ ./pegar -h
+Opciones: 
+ -h: Ayuda
+ -o [archivo_salida]
+ 
+////////       '-u' : No existe esa pcion
+dent@estudios2018:~/Computación2/tp1-2018$ ./pegar -u
+....OPCIÓN INVALIDA....
+Opciones: 
+ -h: Ayuda
+ -o [archivo_salida]
+
+
+
+

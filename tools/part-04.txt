@@ -1,0 +1,7 @@
+formational) . . . . . . . . . . . . . .10
+  4.1.6.  Protocolo Histórico (Historic). . . . . . . . . . . . . . . . . .10
+  4.2.  Definición de Nivel de Requerimiento (Requirement Level). . . . . .10
+  4.2.1.  Protocolo Requerido (Required). . . . . . . . . . . . . . . . . .10
+  4.2.2.  Protocolo Recomendado (Recommended) . . . . . . . . . . . . . . .10
+  4.2.3.  Protocolo Opcional (Elective) . . . . . . . . . . . . . . . . . .10
+  4.2.4.  Protocolo de Uso Limitado (Limited Use) . . . . . . . .FIN!!

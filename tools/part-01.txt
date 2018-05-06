@@ -1,0 +1,14 @@
+              PROTOCOLOS OFICIALES ESTÁNDARES DE INTERNET
+
+
+Estado de este Memo
+
+ Este memo describe el estado de estandarización de los protocolos
+ usados en Internet según lo determinado por el Equipo de Arquitectura
+ de Internet (IAB - Internet Architecture Board). Este memo es un
+ Estándar Internet. La distribución de este memo es ilimitada.
+
+Contenido
+
+ Introducción. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+  1.  El Proceso de Estandarización . . . . . . . . . . 

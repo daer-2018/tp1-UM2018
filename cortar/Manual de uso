@@ -1,0 +1,76 @@
+Paso 1: Compilacion de toda la app
+ldent@estudios2018:~/Computación2/tp1-2018$ make
+gcc -c  cortar.c
+gcc -c  gestionar_archivo.c
+gcc  cortar.o gestionar_archivo.o -o cortar
+cortar, creado!
+
+
+Paso 2: cortar pasando -i entrada, -s tamaño-cortes -o salida "crea varios" 
+dent@estudios2018:~/Computación2/tp1-2018$ make test-s
+./cortar -i ../tools/contenido.txt -s 200 -o part
+
+dent@estudios2018:~/Computación2/tp1-2018$ ls -al
+
+-rwx------  1 dent dent   200 abr 28 22:59 part-0.txt
+-rwx------  1 dent dent   200 abr 28 22:59 part-10.txt
+-rwx------  1 dent dent   200 abr 28 22:59 part-11.txt
+-rwx------  1 dent dent   200 abr 28 22:59 part-12.txt
+-rwx------  1 dent dent   200 abr 28 22:59 part-13.txt
+-rwx------  1 dent dent   200 abr 28 22:59 part-14.txt
+-rwx------  1 dent dent   200 abr 28 22:59 part-15.txt
+-rwx------  1 dent dent    29 abr 28 22:59 part-16.txt
+-rwx------  1 dent dent   200 abr 28 22:59 part-1.txt
+-rwx------  1 dent dent   200 abr 28 22:59 part-2.txt
+-rwx------  1 dent dent   200 abr 28 22:59 part-3.txt
+-rwx------  1 dent dent   200 abr 28 22:59 part-4.txt
+-rwx------  1 dent dent   200 abr 28 22:59 part-5.txt
+-rwx------  1 dent dent   200 abr 28 22:59 part-6.txt
+-rwx------  1 dent dent   200 abr 28 22:59 part-7.txt
+-rwx------  1 dent dent   200 abr 28 22:59 part-8.txt
+-rwx------  1 dent dent   200 abr 28 22:59 part-9.txt
+
+
+Paso 3: como el paso 2 y sin indicar archivo de salida "Salida por pantalla" 
+dent@estudios2018:~/Computación2/tp1-2018$ ./cortar -i ../tools/contenido.txt -s 200
+SALE POR  PANTALLA SALE POR  PANTALLA SALE POR  PANTALLA SALE POR  PANTALLA 
+
+Paso 4: cortar pasando -i entrada, -n cortes -o salida "crea varios"
+dent@estudios2018:~/Computación2/tp1-2018$ make test-n
+./cortar -i ../tools/contenido.txt -n 3 -o part
+dent@estudios2018:~/Computación2/tp1-2018$ ls -al
+
+-rwx------  1 dent dent   500 abr 28 23:09 part-0.txt
+-rwx------  1 dent dent   500 abr 28 23:09 part-1.txt
+-rwx------  1 dent dent   500 abr 28 23:09 part-2.txt
+-rwx------  1 dent dent   500 abr 28 23:09 part-3.txt
+-rwx------  1 dent dent   500 abr 28 23:09 part-4.txt
+-rwx------  1 dent dent   500 abr 28 23:09 part-5.txt
+-rwx------  1 dent dent   229 abr 28 23:09 part-6.txt
+
+Paso 5: como el paso 4 y sin indicar archivo de salida "Salida por pantalla" 
+dent@estudios2018:~/Computación2/tp1-2018$ ./cortar -i ../tools/contenido.txt -n 3
+SALE POR  PANTALLA SALE POR  PANTALLA SALE POR  PANTALLA SALE POR  PANTALLA 
+
+Paso 6: uso de menú, -h muestras menu. otra -x muestra error
+////////        '-h': , Si existe esa opción
+dent@estudios2018:~/Computación2/tp1-2018$ ./pegar -h
+Opciones: 
+ -h: Ayuda
+ -o [archivo_salida]
+ 
+////////       '-u' : No existe esa pcion
+dent@estudios2018:~/Computación2/tp1-2018$ ./pegar -u
+....OPCIÓN INVALIDA....
+Opciones: 
+ -h: Ayuda
+ -o [archivo_salida]
+ 
+Paso 7: Borrando archivos creados al compilar y ejecutar (salvo el fuente) 
+dent@estudios2018:~/Computación2/tp1-2018$ make clean
+rm -f pegar *.o *~ *.txt
+
+
+
+
+
