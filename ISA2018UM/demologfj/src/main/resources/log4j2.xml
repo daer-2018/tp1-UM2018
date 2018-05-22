@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="60">
+    <Properties>
+        <Property name="path">logs</Property>
+    </Properties>
+
+    <Appenders>
+        <!-- 1. Console Appender -->
+        <!--Console name="Console-Appender" target="SYSTEM_OUT"-->
+        <Console name="Console" target="SYSTEM_OUT">
+
+            <!--PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"/-->
+            <PatternLayout pattern="%d{yyyy-MMM-dd HH:mm:ss a} [%t] %-5level %logger{36} - %msg%n" />
+
+            <!-- [5char pa'level] %d{fecha y tiemp0}[%t=quien generó el msg] %c{1}= Cate_d_msg y %msg%n=Msg+/n-->
+                <!--pattern >
+                    [%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+                </pattern>
+            </PatternLayout-->
+
+        </Console>
+        <!-- 2. File Appender with file "${path}/app_log.log" -->
+        <!--File name="App-Appender" fileName="${path}/app_log.log"-->
+
+        <File name="File" fileName="${path}/app_log.log">
+            <!--PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"/-->
+            <PatternLayout pattern="%d{yyyy-MMM-dd HH:mm:ss a} [%t] %-5level %logger{36} - %msg%n" />
+                <!--pattern>
+                    [%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+                </pattern-->
+            <!--/PatternLayout-->
+        </File>
+
+
+        <!-- 3. File Appender with file "${path}/springboot_log.log" -->
+        <File name="SpringBoot-Appender" fileName="${path}/springboot_log.log">
+            <PatternLayout>
+                <pattern>
+                    [%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+                </pattern>
+            </PatternLayout>
+        </File>
+
+    </Appenders>
+
+    <Loggers>
+        <!--Logger name="org.springframework.web" level="info" additivity="false">
+            <AppenderRef ref="SpringBoot-Appender" />
+            <AppenderRef ref="Console" /-->
+            <!--AppenderRef ref="Console-Appender" /-->
+        <!--/Logger-->
+
+        <!-- Redirecciona los log o trazas a AppenderRef ref= -->
+        <Logger name="com.example.demologfj.controler" level="debug"
+                additivity="false">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="File" />
+            <!--AppenderRef ref="SpringBoot-Appender" /-->
+            <!--AppenderRef ref="App-Appender" />
+            <AppenderRef ref="Console-Appender" /-->
+        </Logger>
+        <Logger name="com.example.demologfj.fachada" level="debug"
+                additivity="false">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="File" />
+        </Logger>
+        <!-- La semantica servicio acá -->
+        <Logger name="com.example.demologfj.servicio" level="debug"
+                additivity="false">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="File" />
+        </Logger>
+        <Logger name="com.example.demologfj.modelo" level="debug"
+                additivity="false">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="File" />
+        </Logger>
+        <Logger name="com.example.demologfj.entidad" level="debug"
+                additivity="false">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="File" />
+        </Logger>
+
+        <!-- Log everything in Spring Boot -->
+        <!--Logger name="org.springframework.boot" level="debug" additivity="false">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="File" />
+        </Logger-->
+
+        <!-- Log everything in Spring Core -->
+        <!--Logger name="org.springframework.core" level="debug" additivity="false">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="File" />
+        </Logger-->
+
+        <Root level="error">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="File" />
+        </Root>
+
+        <!--Root>
+            <AppenderRef ref="Console-Appender" />
+        </Root-->
+    </Loggers>
+</Configuration>

@@ -1,0 +1,2 @@
+2018-may-22 15:42:58 PM [http-nio-8080-exec-1] INFO  com.example.demologfj.controler.PublicacionControlador - Ejecurando metodo publicarPublicacionControlador --OK!
+2018-may-22 15:42:58 PM [http-nio-8080-exec-1] INFO  com.example.demologfj.controler.PublicacionControlador - Publicación exitosa y retornando un nuevo publicador--- OK!
